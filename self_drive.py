@@ -25,6 +25,7 @@ import os
 IM_HEIGHT = 480
 IM_WIDTH = 640
 MODEL = keras.models.load_model('nonBalanced-15-Epoch')
+STEERING_CONTROLS = [-0.5, -0.2, 0, 0.2, 0.5]
 
 
 def process_image(image, vehicle):
@@ -40,7 +41,7 @@ def process_image(image, vehicle):
     predSteer = MODEL.predict([resized_img.reshape(-1, 50, 50, 1)])
     print(predSteer)
 
-    vehicle.apply_controls(carla.VehicleControl(throttle=0.5, np.argmax(predSteer)))
+    vehicle.apply_controls(carla.VehicleControl(throttle=0.5, steer=STEERING_CONTROLS[np.argmax(predSteer)]))
 
 
 
