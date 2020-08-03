@@ -1,7 +1,9 @@
 # Carla-Self-Driving-Car
 ## Overview
 This was my first ever machine learning project! I attempted to use a Convolutional Neural Network to predict the steering direction (and angle to a poor degree) in which the 
-vehicle should turn in. I have used the [Carla](https://carla.org/) simulator to create an environment for this project.
+vehicle should turn in. I have used the [Carla](https://carla.org/) simulator to create an environment for this project. This repo contains the files which I have written
+completely myself. If you would like to use them follow the Carla installation and add them to this directory ```PATH\TO\CARLA\CARLA_0.9.9.4\WindowsNoEditor\PythonAPI\examples```
+(make sure to remove ```PATH\TO\CARLA``` and include your own path)
 
 ### Process<br>
 Firstly, I created a python script in ```generate_data.py``` to gather training data. The training data was initially a 1080x720 RGBA image which I later normalized
