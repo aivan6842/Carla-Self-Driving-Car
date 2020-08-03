@@ -5,7 +5,7 @@ vehicle should turn in. I have used the [Carla](https://carla.org/) simulator to
 completely myself. If you would like to use them, follow the Carla installation and add them to this directory ```PATH\TO\CARLA\CARLA_0.9.9.4\WindowsNoEditor\PythonAPI\examples```
 (make sure to remove ```PATH\TO\CARLA``` and include your own path)
 
-### Process<br>
+## Process<br>
 Firstly, I created a python script in ```generate_data.py``` to gather training data. The training data was initially a 1080x720 RGBA image which I later normalized
 to be a 50x50x1 greyscale image. I gathered around 40,000 frames of the car driving which I later used to train my CNN model.
 
